@@ -1,7 +1,11 @@
-import { Container } from "./styles";
+import { Wrapper, Wall } from "./styles";
 
 const HomeBlock = ({ year, link }) => {
-  return <Container>{<h1>{year}</h1>}</Container>;
+  return (
+    <Wrapper year={year}>
+      <Wall>{<h1>{year}</h1>}</Wall>
+    </Wrapper>
+  );
 };
 
 export default HomeBlock;

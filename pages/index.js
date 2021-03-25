@@ -1,12 +1,20 @@
 import data from "../shows.json";
 import styled from "styled-components";
 import HomeBlock from "../components/HomeBlock";
+import logo from "../public/logo.png";
 
 const Body = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 100px;
+  margin: 0 100px;
+  border: 3px #ffffff solid;
+`;
+
+const Header = styled.div`
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 `;
 
 const Home = () => {
@@ -14,7 +22,14 @@ const Home = () => {
   const items = values.map((value) => {
     return <HomeBlock {...value}></HomeBlock>;
   });
-  return <Body>{items}</Body>;
+  return (
+    <>
+      <Header>
+        <img src={logo} width="300"></img>
+      </Header>
+      <Body>{items}</Body>
+    </>
+  );
 };
 
 export default Home;
