@@ -1,20 +1,8 @@
-import data from "../shows.json";
-import styled from "styled-components";
 import HomeBlock from "../components/HomeBlock";
-import logo from "../public/logo.png";
+import { Body } from "./styles";
 
-const Body = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 0 100px;
-`;
-
-const Header = styled.div`
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-`;
+import data from "../shows.json";
+import Header from "../components/Header";
 
 const Home = () => {
   const values = data;
@@ -23,9 +11,7 @@ const Home = () => {
   });
   return (
     <>
-      <Header>
-        <img src={logo} width="100"></img>
-      </Header>
+      <Header />
       <Body>{items}</Body>
     </>
   );
