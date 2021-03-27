@@ -1,17 +1,17 @@
 import { useRouter } from "next/router";
-import data from "../../../shows.json";
+import data from "../../shows.json";
 
 const Player = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const values = data.filter((item) => (item.year = id));
+  const [item = null] = data.filter((item) => (item.year == id));
 
-  if (values == null) {
+  if (item == null) {
     return <div>sem nd</div>;
   }
 
-  const { link } = values;
+  const { link } = item;
 
   return (
     <div>
