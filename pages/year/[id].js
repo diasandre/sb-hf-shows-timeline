@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { PlayerContainer, LoadingWrapper } from "../styles";
+import { PlayerContainer, LoadingWrapper } from "../../styles/styles";
 import PuffLoader from "react-spinners/PuffLoader";
 import Header from "../../components/Header";
 

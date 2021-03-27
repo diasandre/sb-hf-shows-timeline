@@ -1,5 +1,5 @@
 import HomeBlock from "../components/HomeBlock";
-import { Body } from "./styles";
+import { Body } from "../styles/styles";
 
 import data from "../shows.json";
 import Header from "../components/Header";
