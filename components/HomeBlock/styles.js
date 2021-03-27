@@ -5,8 +5,10 @@ export const Wrapper = styled.div`
   min-width: 350px;
   background: white;
   flex: 1;
-  background-image: url(${({ year }) => `../../${year}.gif`});
+  background-image: url(${({ year }) => `../../gifs/${year}.gif`});
   background-size: cover;
+  margin: 5px;
+  cursor: pointer;
 `;
 
 export const Wall = styled.div`
@@ -19,6 +21,7 @@ export const Wall = styled.div`
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-size: 1.5em;
+  cursor: pointer;
 
   &:hover {
     background: rgba(0, 0, 0, 0.4);

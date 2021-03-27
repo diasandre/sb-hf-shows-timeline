@@ -8,7 +8,6 @@ const Body = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0 100px;
-  border: 3px #ffffff solid;
 `;
 
 const Header = styled.div`
@@ -25,7 +24,7 @@ const Home = () => {
   return (
     <>
       <Header>
-        <img src={logo} width="300"></img>
+        <img src={logo} width="100"></img>
       </Header>
       <Body>{items}</Body>
     </>
