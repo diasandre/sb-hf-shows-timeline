@@ -7,11 +7,6 @@ export const Body = styled.div`
   margin: 0 100px;
 `;
 
-export const PlayerContainer = styled.div`
-    height: 80vh;
-    padding: 0 100px;
-`
-
 export const LoadingWrapper = styled.div`
     display: flex;
     height: 100vh;

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { PlayerContainer, LoadingWrapper } from "../../styles/styles";
+import { LoadingWrapper } from "../../styles/styles";
 import PuffLoader from "react-spinners/PuffLoader";
 import Header from "../../components/Header";
 
 import data from "../../shows.json";
+import YouTube from "react-youtube";
 
 const Player = () => {
   const router = useRouter();
@@ -23,22 +24,27 @@ const Player = () => {
   }, []);
 
   if (content != null) {
-    const { link } = content;
-    const src = `http://www.youtube.com/embed/${link}?autoplay=1&rel=0&showinfo=0&iv_load_policy=3&fs=1`;
+    const { link: videoId } = content;
+
+    const opts = {
+      width: "100%",
+      height: "100%",
+      playerVars: {
+        autoplay: 1,
+        rel: 0,
+        showinfo: 0,
+        iv_load_policy: 3,
+      },
+    };
 
     return (
       <>
         <Header />
-        <PlayerContainer>
-          <iframe
-            id="player"
-            type="text/html"
-            width="100%"
-            height="100%"
-            src={src}
-            frameBorder="0"
-          />
-        </PlayerContainer>
+        <YouTube
+          videoId={videoId}
+          opts={opts}
+          className="player-youtube"
+        />
       </>
     );
   } else {
