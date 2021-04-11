@@ -19,7 +19,6 @@ export const Wall = styled.div`
   justify-content: center;
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-size: 1.5em;
   cursor: pointer;
 

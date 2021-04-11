@@ -7,7 +7,7 @@ import Header from "../components/Header";
 const Home = () => {
   const values = data;
   const items = values.map((value) => {
-    return <HomeBlock {...value}></HomeBlock>;
+    return <HomeBlock key={value.year} {...value}></HomeBlock>;
   });
   return (
     <>
