@@ -5,7 +5,7 @@ import { GoogleFonts } from "next-google-fonts";
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" />
       <Head>
         <title>Super Bowl HF timeline</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

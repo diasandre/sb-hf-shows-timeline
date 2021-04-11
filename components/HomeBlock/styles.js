@@ -26,3 +26,7 @@ export const Wall = styled.div`
     background: rgba(0, 0, 0, 0.4);
   }
 `;
+
+export const BlockTitle = styled.h1`
+  font-weight:400;
+`

@@ -1,12 +1,14 @@
-import { Wrapper, Wall } from "./styles";
+import { Wrapper, Wall, BlockTitle, AddMoreSoon } from "./styles";
 import Link from "next/link";
 
 const HomeBlock = ({ year }) => {
-  const href = `/year/${year}`
+  const href = `/year/${year}`;
   return (
     <Link href={href}>
       <Wrapper year={year}>
-        <Wall>{<h1>{year}</h1>}</Wall>
+        <Wall>
+          <BlockTitle>{year}</BlockTitle>
+        </Wall>
       </Wrapper>
     </Link>
   );
